@@ -1,0 +1,40 @@
+.joinchat-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 50px);
+}
+
+.joinchat-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.joinchat-container input {
+  width: 210px;
+  height: 40px;
+  margin: 7px;
+  border: 2px solid #43a047;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.joinchat-container button {
+  width: 225px;
+  height: 50px;
+  margin: 7px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 16px;
+  background: #66c46a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.joinchat-container button:hover {
+  background-color: green;
+}
