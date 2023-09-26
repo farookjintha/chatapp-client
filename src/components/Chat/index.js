@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./chat.css";
 import { useState } from "react";
+import useFindUser from "../../hooks/useFindUser";
 
 const Chat = (props) => {
   const { socket, username, room } = props;

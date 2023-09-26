@@ -1,8 +1,10 @@
 import "./register.css";
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [userData, setUserData] = useState({
     name: "",
     email: "",
@@ -21,18 +23,22 @@ const Register = () => {
     try {
       e.preventDefault();
       const response = await axios.post(
-        `http://localhost:4000/login`,
+        `http://localhost:4000/api/register`,
         {
           ...userData,
         },
         { withCredentials: true }
       );
+      if (response) {
+        navigate("/login");
+      }
     } catch (error) {
       console.log("Error while registering.");
     }
   };
   return (
     <div className="register-container">
+      <h1>Register</h1>
       <form onSubmit={handleRegistration} className="form-group">
         <div className="segment">
           <label>Name</label>
@@ -74,7 +80,7 @@ const Register = () => {
             type="text"
             className="form-control"
             id="mobileNumber"
-            value={userData.name}
+            value={userData.mobileNumber}
             placeholder="Enter your Mobile Number"
             onChange={(e) => handleForm({ mobileNumber: e.target.value })}
           />

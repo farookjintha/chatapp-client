@@ -18,3 +18,10 @@
   height: 30px;
   margin-right: 2em;
 }
+
+.login-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 1em;
+}
